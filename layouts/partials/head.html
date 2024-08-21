@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+<meta name="google-site-verification" content="{{ .Site.Params.GoogleSiteVerification | safeHTML }}" />
+
+<meta name="author" content="{{ .Site.Params.Author | safeHTML }}" />
+{{ template "_internal/google_analytics.html" . }}
+{{ template "_internal/opengraph.html" . }}
+<link rel="shortcut icon" href="/favicon.png">

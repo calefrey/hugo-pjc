@@ -1,0 +1,42 @@
+{{ define "main" }}
+<tr>
+  <td>
+  </td>
+</tr>
+<tr>
+  <td style="padding:2.5%;width:63%;vertical-align:middle">
+    <img id="profile-img" style="float:right" src="/headshot.jpg" alt={{ site.Title }}>
+    <div style="text-align: center;">
+      <name>{{ site.Title }}</name>
+    </div>
+    {{ .Content }}
+    <p class="links" style="text-align: center;">
+      <!-- links go here -->
+      {{ $links := site.Params.links }}
+      {{ $links := apply $links "partial" "links" "."}}
+      {{ $links := delimit $links " / "}}
+      {{ htmlUnescape $links | safeHTML }}
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <heading>News</heading>
+  </td>
+</tr>
+<tr>
+  <td>
+    {{ partial "news.html" .}}
+  </td>
+</tr>
+<tr>
+  <td>
+    <heading>Selected Publications</heading>
+  </td>
+</tr>
+<tr>
+  <td>
+    {{ partial "publications.html" . }}
+  </td>
+</tr>
+{{ end }}

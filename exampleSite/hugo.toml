@@ -1,0 +1,38 @@
+baseURL = 'https://example.org/'
+theme = 'hugo-pjc'
+languageCode = 'en-us'
+title = 'Jon Barron'
+
+[params]
+googleSiteVerification = 'CHANGEME'
+author = 'Jon Barron'
+description = ''
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-CHANGEME'
+
+[[params.links]]
+title = 'Email'
+link = 'mailto:jonbarron@gmail.com'
+
+[[params.links]]
+title = 'CV'
+link = '/Curriculum_Vitae.pdf'
+# this needs to be in the /static folder
+
+[[params.links]]
+title = 'Bio'
+link = 'https://jonbarron.info/data/JonBarron-bio.txt'
+
+[[params.links]]
+title = 'Scholar'
+link = 'https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ'
+
+[[params.links]]
+title = 'Twitter'
+link = 'https://twitter.com/jon_barron'
+
+[[params.links]]
+title = 'GitHub'
+link = 'https://github.com/jonbarron/'

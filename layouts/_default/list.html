@@ -1,0 +1,18 @@
+
+{{ define "main" }}
+<tr>
+  <td>
+    <div style="text-align: center;">
+      <name>{{ .Title }}</name>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+  {{ range .Pages }}
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ .Summary }}
+  {{ end }}
+  </td>
+</tr>
+{{ end }}

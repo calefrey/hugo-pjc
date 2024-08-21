@@ -1,0 +1,7 @@
+<nav class="menu">
+  <ul class="menu-inner">
+    {{ range .Site.Menus.main }}
+    <li><a style="font-size: 20px;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>

@@ -1,0 +1,12 @@
+name = 'pjc-hugo'
+license = 'MIT'
+licenselink = 'https://github.com/calefrey/hugo-pjc/LICENSE'
+description = 'A simple hugo site for academics, specifcally designed for Princeton but can be tweaked as needed.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/calefrey/hugo-pjc'
+
+# If the theme has a single author
+[author]
+  name = 'Caleb Frey'
+  homepage = 'https://github.com/calefrey'

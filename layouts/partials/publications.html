@@ -1,0 +1,18 @@
+{{ $pubs := where .Site.RegularPages "Section" "publications" }}
+<!-- {{ print $pubs }} -->
+{{- with $pubs.ByDate }}
+  {{ range . -}}
+    <p>
+      <a href="{{ .Params.url }}">
+        <papertitle>{{ .LinkTitle }}</papertitle>
+      </a>
+      <!-- <a href="{{ .RelPermalink }}"><papertitle>{{ .LinkTitle }}</papertitle></a> -->
+      <br>
+      {{ .Params.Authors | markdownify }}
+      <br />
+      <em>{{ .Params.publication }}</em>
+      <br />
+      {{ .Content }}
+    </p>
+  {{- end -}}
+{{- end }}
